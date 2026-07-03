@@ -2,11 +2,14 @@
 
 > 一个基于 Spring Boot 的文档格式转换 Web 应用，支持 PDF、Word、Excel、HTML、PPT 之间的互转。
 
+![界面预览](d97c8f290cd1b6b92c333265d242a07f.png)
+
 ---
 
 ## ✨ 功能特性
 
-- 📄 **PDF ↔ Word**：保留加粗、斜体、下划线、颜色、字号、对齐方式
+- 📄 **Word → PDF**：保留加粗、斜体、下划线、颜色、字号、对齐方式
+- 📄 **PDF → Word**：提取文本内容生成 Word
 - 📊 **Excel → PDF**：保留表格结构
 - 🌐 **HTML ↔ PDF**：支持网页内容转 PDF
 - 📽️ **PPT → PDF**：提取幻灯片文本内容
