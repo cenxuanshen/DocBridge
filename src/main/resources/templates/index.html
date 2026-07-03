@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📄 DocBridge - 文档转换工具</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<button class="theme-toggle" id="themeToggle" title="切换深色模式">🌙</button>
+
+<div class="container">
+    <header>
+        <h1>📄 DocBridge - 文档转换工具</h1>
+        <p>PDF · Word · Excel · HTML · PPT 多格式互转</p>
+    </header>
+
+    <main>
+        <!-- 上传区域 -->
+        <div class="upload-area" id="uploadArea">
+            <div class="upload-content">
+                <span class="upload-icon">📄</span>
+                <p>点击或拖拽上传文件</p>
+                <small>支持 PDF、DOCX、XLSX、HTML、TXT、PPTX</small>
+                <small style="display:block;margin-top:4px;color:#9ca3af;">⬆ 单个文件最大 50MB</small>
+            </div>
+            <input type="file" id="fileInput" accept=".pdf,.docx,.xlsx,.html,.txt,.pptx">
+        </div>
+
+        <!-- 文件信息 -->
+        <div class="file-info" id="fileInfo" style="display:none;">
+            <span class="file-type-badge" id="fileTypeBadge">📄</span>
+            <span class="file-name" id="fileName">文件名</span>
+            <span class="file-size" id="fileSize">0 KB</span>
+            <button class="remove-btn" id="removeFile">✕</button>
+        </div>
+
+        <!-- 格式选择 -->
+        <div class="convert-section">
+            <div class="format-select">
+                <label>从</label>
+                <select id="fromFormat">
+                    <option value="pdf">PDF</option>
+                    <option value="docx">Word</option>
+                    <option value="xlsx">Excel</option>
+                    <option value="html">HTML</option>
+                    <option value="txt">TXT</option>
+                    <option value="pptx">PPT</option>
+                </select>
+            </div>
+            <div class="format-arrow">→</div>
+            <div class="format-select">
+                <label>到</label>
+                <select id="toFormat">
+                    <option value="pdf">PDF</option>
+                    <option value="docx">Word</option>
+                    <option value="xlsx">Excel</option>
+                    <option value="html">HTML</option>
+                    <option value="txt">TXT</option>
+                    <option value="pptx">PPT</option>
+                </select>
+            </div>
+            <button class="convert-btn" id="convertBtn">开始转换</button>
+        </div>
+
+        <!-- 结果 -->
+        <div class="result-area" id="resultArea" style="display:none;">
+            <div class="progress-container" id="progressContainer">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div class="progress-text" id="progressText">0%</div>
+            <div class="result-status" id="resultStatus">✅ 转换完成</div>
+            <div class="result-message" id="resultMessage"></div>
+            <a class="download-btn" id="downloadBtn" href="#">📥 下载文件</a>
+        </div>
+    </main>
+
+    <!-- 底部 -->
+    <footer>
+        <p>📌 当前支持 PDF ↔ Word ↔ Excel ↔ HTML ↔ PPT 互转 | 最大 50MB</p>
+        <p style="margin-top:8px;font-size:12px;color:#9ca3af;">
+            👨‍💻 Created by s1huan1an · 2026
+        </p>
+    </footer>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>
